@@ -1,0 +1,22 @@
+.root{
+    -fx-background-color: linear-gradient(to top right, #26a69a, #80deea);
+}
+
+#ap-sidebar{
+    -fx-background-color: #80deea;
+}
+
+#ap-sidebar-translate {
+    -fx-background-color: linear-gradient(to top right, #26a69a, #80deea);
+}
+
+#sidebar-button {
+    -fx-text-fill: #4d4d4d;
+}
+
+#sidebar-button:hover {
+    -fx-background-color:#26A69A;
+    -fx-effect: dropshadow(gaussian, #4d4d4d, 0, 0, 0, 2);
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}

@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'E_P_Clinica_Vet.jnlp'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedE_P_Clinica_Vet_id() {
+        dtjava.embed(
+            {
+                id : 'E_P_Clinica_Vet_id',
+                url : 'E_P_Clinica_Vet.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '600',
+                height : '400'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedE_P_Clinica_Vet_id);
+</script>
+
+</head><body>
+<h2>Test page for <b>E.P Clinica Vet</b></h2>
+  <b>Webstart:</b> <a href='E_P_Clinica_Vet.jnlp' onclick="return launchApplication('E_P_Clinica_Vet.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

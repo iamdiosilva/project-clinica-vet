@@ -1,0 +1,9 @@
+.root #leftAP, .root #rightAP{
+    -fx-background-color: linear-gradient(to top right, #26a69a, #80deea);
+}
+
+.root #btnLogin {
+
+    -fx-background-color: #26A69A ;
+}
+

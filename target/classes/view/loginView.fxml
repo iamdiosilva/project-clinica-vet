@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAP" onKeyPressed="#shortCutLoginBtn" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controll.LoginViewController">
+   <children>
+      <AnchorPane fx:id="leftAP" layoutX="7.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="239.0" fitWidth="337.0" layoutX="6.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="7.0">
+               <image>
+                  <Image url="@../images/dogrest.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="187.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="187.0">
+               <image>
+                  <Image url="@../images/catPic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="rightAP" layoutX="520.0" layoutY="182.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="jfxUserField" alignment="CENTER" focusColor="WHITE" labelFloat="true" layoutX="137.0" layoutY="224.0" promptText="Usuário" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="111.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="jfxPasswordField" alignment="CENTER" focusColor="WHITE" labelFloat="true" layoutX="137.0" layoutY="300.0" promptText="Senha" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="111.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXPasswordField>
+            <FontAwesomeIconView fill="#4d4d4d" glyphName="USER" layoutX="83.0" layoutY="259.0" size="45" />
+            <FontAwesomeIconView fill="#4d4d4d" glyphName="LOCK" layoutX="88.0" layoutY="344.0" size="45" />
+            <JFXButton fx:id="btnMinimize" layoutX="352.0" layoutY="9.0" onAction="#minimizeBtn">
+               <graphic>
+                  <MaterialDesignIconView fill="#4d4d4d" glyphName="WINDOW_MINIMIZE" size="35" />
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnExitLogin" layoutX="376.0" layoutY="22.0" onAction="#closeLoginScreenBtn" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <graphic>
+                  <MaterialDesignIconView fill="#4d4d4d" glyphName="CLOSE" size="40" />
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="123.0" layoutY="500.0" text="Problemas para efetuar login?" textFill="#4d4d4d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnLogin" accessibleText="Entrar" layoutX="191.0" layoutY="390.0" onAction="#loginBtnAction" text="Entrar" textFill="#4d4d4d" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="158.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="166.0" layoutY="81.0" text="Login" textFill="#4d4d4d" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="169.0">
+               <font>
+                  <Font name="Trebuchet MS" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
