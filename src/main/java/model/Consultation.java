@@ -10,19 +10,19 @@ public class Consultation {
     private long id_Animal;
     private long id_Client;
     private long id_Employee;
-    private TypeConsult consult_type;
+    private TypeConsult consult_Type;
     private Date date_Consult;
     private Date date_input;
     private Date date_exit;
     private double price_Consult;
     private PaymentStatus status;
 
-    public Consultation(long id_Consultation, long id_Animal, long id_Client, long id_Employee, TypeConsult consult_type, Date date_Consult, Date date_input, Date date_exit, double price_Consult, PaymentStatus status) {
+    public Consultation(long id_Consultation, long id_Animal, long id_Client, long id_Employee, TypeConsult consult_Type, Date date_Consult, Date date_input, Date date_exit, double price_Consult, PaymentStatus status) {
         this.id_Consultation = id_Consultation;
         this.id_Animal = id_Animal;
         this.id_Client = id_Client;
         this.id_Employee = id_Employee;
-        this.consult_type = consult_type;
+        this.consult_Type = consult_Type;
         this.date_Consult = date_Consult;
         this.date_input = date_input;
         this.date_exit = date_exit;
@@ -62,12 +62,12 @@ public class Consultation {
         this.id_Employee = id_Employee;
     }
 
-    public TypeConsult getConsult_type() {
-        return consult_type;
+    public TypeConsult getConsult_Type() {
+        return consult_Type;
     }
 
-    public void setConsult_type(TypeConsult consult_type) {
-        this.consult_type = consult_type;
+    public void setConsult_Type(TypeConsult consult_type) {
+        this.consult_Type = consult_type;
     }
 
     public Date getDate_Consult() {
