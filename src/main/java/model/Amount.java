@@ -8,16 +8,16 @@ public class Amount {
     private long id_Product;
     private double amount_Product;
     private double sale_Price;
-    private double total_sale;
+    private double total_Sale;
     private SaleStatus status;
 
-    public Amount(long id_Consumption, long id_Consultation, long id_Product, double amount_Product, double sale_Price, double total_sale, SaleStatus status) {
+    public Amount(long id_Consumption, long id_Consultation, long id_Product, double amount_Product, double sale_Price, double total_Sale, SaleStatus status) {
         this.id_Consumption = id_Consumption;
         this.id_Consultation = id_Consultation;
         this.id_Product = id_Product;
         this.amount_Product = amount_Product;
         this.sale_Price = sale_Price;
-        this.total_sale = total_sale;
+        this.total_Sale = total_Sale;
         this.status = status;
     }
 
@@ -61,12 +61,12 @@ public class Amount {
         this.sale_Price = sale_Price;
     }
 
-    public double getTotal_sale() {
-        return total_sale;
+    public double getTotal_Sale() {
+        return total_Sale;
     }
 
-    public void setTotal_sale(double total_sale) {
-        this.total_sale = total_sale;
+    public void setTotal_Sale(double total_Sale) {
+        this.total_Sale = total_Sale;
     }
 
     public SaleStatus getStatus() {

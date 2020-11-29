@@ -8,16 +8,16 @@ public class Animal {
     private String name_Animal;
     private String breed;
     private String description;
-    private String characterist;
+    private String characteristics;
     private Situation status;
     private AnimalType animal_Type;
 
-    public Animal(long id_Animal, String name_Animal, String breed, String description, String characterist, Situation status, AnimalType animal_Type) {
+    public Animal(long id_Animal, String name_Animal, String breed, String description, String characteristics, Situation status, AnimalType animal_Type) {
         this.id_Animal = id_Animal;
         this.name_Animal = name_Animal;
         this.breed = breed;
         this.description = description;
-        this.characterist = characterist;
+        this.characteristics = characteristics;
         this.status = status;
         this.animal_Type = animal_Type;
     }
@@ -54,12 +54,12 @@ public class Animal {
         this.description = description;
     }
 
-    public String getCharacterist() {
-        return characterist;
+    public String getCharacteristics() {
+        return characteristics;
     }
 
-    public void setCharacterist(String characterist) {
-        this.characterist = characterist;
+    public void setCharacteristics(String characteristics) {
+        this.characteristics = characteristics;
     }
 
     public Situation getStatus() {
@@ -78,4 +78,5 @@ public class Animal {
         this.animal_Type = animal_Type;
     }
 }
+
 

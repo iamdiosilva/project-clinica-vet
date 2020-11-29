@@ -2,9 +2,9 @@ package model;
 
 public class Person {
     private long id_Person;
+    private long document_Number;
     private String name_Person;
     private String document_Type;
-    private long document_Number;
     private String address;
     private String telephone;
     private String email;
@@ -13,12 +13,11 @@ public class Person {
 
     }
 
-    public Person(long id_Person, String name_Person, String document_Type, long document_Number, String address,
-                  String telephone, String email) {
+    public Person(long id_Person, long document_Number, String name_Person, String document_Type, String address, String telephone, String email) {
         this.id_Person = id_Person;
+        this.document_Number = document_Number;
         this.name_Person = name_Person;
         this.document_Type = document_Type;
-        this.document_Number = document_Number;
         this.address = address;
         this.telephone = telephone;
         this.email = email;
@@ -30,6 +29,14 @@ public class Person {
 
     public void setId_Person(long id_Person) {
         this.id_Person = id_Person;
+    }
+
+    public long getDocument_Number() {
+        return document_Number;
+    }
+
+    public void setDocument_Number(long document_Number) {
+        this.document_Number = document_Number;
     }
 
     public String getName_Person() {
@@ -46,14 +53,6 @@ public class Person {
 
     public void setDocument_Type(String document_Type) {
         this.document_Type = document_Type;
-    }
-
-    public long getDocument_Number() {
-        return document_Number;
-    }
-
-    public void setDocument_Number(long document_Number) {
-        this.document_Number = document_Number;
     }
 
     public String getAddress() {

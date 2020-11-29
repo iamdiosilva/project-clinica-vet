@@ -10,23 +10,23 @@ public class Consultation {
     private long id_Animal;
     private long id_Client;
     private long id_Employee;
-    private TypeConsult consult_Type;
-    private Date date_Consult;
-    private Date date_input;
-    private Date date_exit;
     private double price_Consult;
+    private Date date_Consult;
+    private Date date_Input;
+    private Date date_Exit;
+    private TypeConsult consult_Type;
     private PaymentStatus status;
 
-    public Consultation(long id_Consultation, long id_Animal, long id_Client, long id_Employee, TypeConsult consult_Type, Date date_Consult, Date date_input, Date date_exit, double price_Consult, PaymentStatus status) {
+    public Consultation(long id_Consultation, long id_Animal, long id_Client, long id_Employee, double price_Consult, Date date_Consult, Date date_Input, Date date_Exit, TypeConsult consult_Type, PaymentStatus status) {
         this.id_Consultation = id_Consultation;
         this.id_Animal = id_Animal;
         this.id_Client = id_Client;
         this.id_Employee = id_Employee;
-        this.consult_Type = consult_Type;
-        this.date_Consult = date_Consult;
-        this.date_input = date_input;
-        this.date_exit = date_exit;
         this.price_Consult = price_Consult;
+        this.date_Consult = date_Consult;
+        this.date_Input = date_Input;
+        this.date_Exit = date_Exit;
+        this.consult_Type = consult_Type;
         this.status = status;
     }
 
@@ -62,12 +62,12 @@ public class Consultation {
         this.id_Employee = id_Employee;
     }
 
-    public TypeConsult getConsult_Type() {
-        return consult_Type;
+    public double getPrice_Consult() {
+        return price_Consult;
     }
 
-    public void setConsult_Type(TypeConsult consult_type) {
-        this.consult_Type = consult_type;
+    public void setPrice_Consult(double price_Consult) {
+        this.price_Consult = price_Consult;
     }
 
     public Date getDate_Consult() {
@@ -78,28 +78,28 @@ public class Consultation {
         this.date_Consult = date_Consult;
     }
 
-    public Date getDate_input() {
-        return date_input;
+    public Date getDate_Input() {
+        return date_Input;
     }
 
-    public void setDate_input(Date date_input) {
-        this.date_input = date_input;
+    public void setDate_Input(Date date_Input) {
+        this.date_Input = date_Input;
     }
 
-    public Date getDate_exit() {
-        return date_exit;
+    public Date getDate_Exit() {
+        return date_Exit;
     }
 
-    public void setDate_exit(Date date_exit) {
-        this.date_exit = date_exit;
+    public void setDate_Exit(Date date_Exit) {
+        this.date_Exit = date_Exit;
     }
 
-    public double getPrice_Consult() {
-        return price_Consult;
+    public TypeConsult getConsult_Type() {
+        return consult_Type;
     }
 
-    public void setPrice_Consult(double price_Consult) {
-        this.price_Consult = price_Consult;
+    public void setConsult_Type(TypeConsult consult_Type) {
+        this.consult_Type = consult_Type;
     }
 
     public PaymentStatus getStatus() {

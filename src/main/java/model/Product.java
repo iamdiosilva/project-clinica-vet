@@ -2,17 +2,17 @@ package model;
 
 public class Product {
     private long id_Product;
-    private String name_Product;
-    private String description;
     private double unit_Of_Measurement;
     private double sale_Price;
+    private String name_Product;
+    private String description;
 
-    public Product(long id_Product, String name_Product, String description, double unit_Of_Measurement, double sale_Price) {
+    public Product(long id_Product, double unit_Of_Measurement, double sale_Price, String name_Product, String description) {
         this.id_Product = id_Product;
-        this.name_Product = name_Product;
-        this.description = description;
         this.unit_Of_Measurement = unit_Of_Measurement;
         this.sale_Price = sale_Price;
+        this.name_Product = name_Product;
+        this.description = description;
     }
 
     public long getId_Product() {
@@ -21,22 +21,6 @@ public class Product {
 
     public void setId_Product(long id_Product) {
         this.id_Product = id_Product;
-    }
-
-    public String getName_Product() {
-        return name_Product;
-    }
-
-    public void setName_Product(String name_Product) {
-        this.name_Product = name_Product;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public double getUnit_Of_Measurement() {
@@ -53,5 +37,21 @@ public class Product {
 
     public void setSale_Price(double sale_Price) {
         this.sale_Price = sale_Price;
+    }
+
+    public String getName_Product() {
+        return name_Product;
+    }
+
+    public void setName_Product(String name_Product) {
+        this.name_Product = name_Product;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
