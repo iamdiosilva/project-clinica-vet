@@ -21,17 +21,6 @@ public class Employee extends Person {
         this.status = status;
     }
 
-    public Employee(long id_Person, String name_Person, String document_Type, long document_Number, String address, String telephona, String email, long id_Person1, long employee_Code, double salary, String access, String login, String password, StatusEmployee status) {
-        super(id_Person, name_Person, document_Type, document_Number, address, telephona, email);
-        this.id_Person = id_Person1;
-        this.employee_Code = employee_Code;
-        this.salary = salary;
-        this.access = access;
-        this.login = login;
-        this.password = password;
-        this.status = status;
-    }
-
     @Override
     public long getId_Person() {
         return id_Person;
