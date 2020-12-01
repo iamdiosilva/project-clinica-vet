@@ -1,5 +1,5 @@
 package modelenum;
 
 public enum DocumentType {
-    CPF, CNPJ
+    CPF, CNPJ,TIPO_DOCUMENTO
 }

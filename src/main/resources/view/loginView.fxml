@@ -29,12 +29,12 @@
       </AnchorPane>
       <AnchorPane fx:id="rightAP" layoutX="520.0" layoutY="182.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXTextField fx:id="jfxUserField" alignment="CENTER" focusColor="WHITE" labelFloat="true" layoutX="137.0" layoutY="224.0" promptText="Usuário" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="111.0">
+            <JFXTextField fx:id="jfxUserField" alignment="CENTER" focusColor="WHITE" labelFloat="true" layoutX="137.0" layoutY="224.0" promptText="Usuário" text="admin" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="111.0">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <JFXPasswordField fx:id="jfxPasswordField" alignment="CENTER" focusColor="WHITE" labelFloat="true" layoutX="137.0" layoutY="300.0" promptText="Senha" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="111.0">
+            <JFXPasswordField fx:id="jfxPasswordField" alignment="CENTER" focusColor="WHITE" labelFloat="true" layoutX="137.0" layoutY="300.0" promptText="Senha" text="admin" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="111.0">
                <font>
                   <Font size="18.0" />
                </font>

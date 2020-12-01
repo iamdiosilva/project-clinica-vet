@@ -16,14 +16,6 @@ public class Client extends Person {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long person_Code;
 
-   /*
-    public Client(long id_Person, long person_Code) {
-        this.id_Person = id_Person;
-        this.person_Code = person_Code;
-    }
-
-    */
-
     @Override
     public long getId_Person() {
         return id_Person;

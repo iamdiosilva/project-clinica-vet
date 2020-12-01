@@ -1,6 +1,8 @@
 package controll;
 
 import Dao.CrudGernericDao;
+import Util.Alerta;
+import Util.ValidarCampo;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
@@ -13,7 +15,6 @@ import modelenum.DocumentType;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -58,19 +59,29 @@ public class ClientRegisterViewController implements Initializable {
     @FXML
     void cadastroRegistro(ActionEvent event) {
 
-    Client client = new Client();
-    client.setName_Person(tfName.getText());
-    client.setAddress(tfAdress.getText());
-    client.setTelephone(tfContact.getText());
-    client.setDocument_Type(cbTypeDocument.getSelectionModel().getSelectedItem());
-    client.setDoc_Number(tfNumDocument.getText());
-    client.setEmail(tfEmail.getText());
+        if(ValidarCampo.chegcarcampoVazio(tfName,tfAdress,tfContact,cbTypeDocument,tfNumDocument)){
 
-      if(dao.salvarDados(client)){
-          System.out.println("salvou");
-      }else {
-          System.out.println("Erro ao naconexão");
-      }
+        }
+        Client client = new Client();
+        client.setName_Person(tfName.getText());
+        client.setAddress(tfAdress.getText());
+        client.setTelephone(tfContact.getText());
+        client.setDocument_Type(cbTypeDocument.getSelectionModel().getSelectedItem());
+        client.setDoc_Number(tfNumDocument.getText());
+        client.setEmail(tfEmail.getText());
 
-}
+        if (dao.salvarDados(client)) {
+            Alerta.msgInformacao("Registro Salvo com Sucesso ");
+        } else {
+            Alerta.msgInformacao("Ocorreu erros ao Gravar o registro ");
+        }
+    }
+    public void limparCampos(){
+        tfName.clear();
+        tfAdress.clear();
+        tfContact.clear();
+        tfEmail.clear();
+        tfNumDocument.clear();
+        cbTypeDocument.setValue(DocumentType.TIPO_DOCUMENTO);
+    }
 }
