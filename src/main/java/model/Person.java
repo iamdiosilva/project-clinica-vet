@@ -12,7 +12,7 @@ public class Person {
     @Column(name="id_person",nullable = false)
     private long id_Person;
 
-    @Column(name="doc_numero",length = 50,nullable = false)
+    @Column(name="doc_numero",length = 18,nullable = false)
     private String doc_Number;
 
     @Column(name="name_Person",length = 100,nullable = false)
@@ -28,7 +28,7 @@ public class Person {
     @Column(name="address",length = 100,nullable = false)
     private String address;
 
-    @Column(name="telephone",length = 15,nullable = false)
+    @Column(name="telephone",length = 13,nullable = false)
     private String telephone;
 
     @Column(name="email",length = 100,nullable = false)
