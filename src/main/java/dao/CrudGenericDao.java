@@ -1,14 +1,14 @@
-package Dao;
+package dao;
 
 import org.hibernate.Session;
 
-public class CrudGernericDao<T> {
+public class CrudGenericDao<T> {
 
-    public boolean salvarDados(T tipio){
+    public boolean saveInformation(T type){
         try{
-            Session session = ConexaoBanco.getSessionFactory().openSession();
+            Session session = DataBaseConnection.getSessionFactory().openSession();
             session.beginTransaction(); //inicia transacão
-            session.merge(tipio); //pegar dados no banco
+            session.merge(type); //pegar dados no banco
             session.getTransaction().commit();//gravar no banco
             session.close(); // fecha a conexao
 

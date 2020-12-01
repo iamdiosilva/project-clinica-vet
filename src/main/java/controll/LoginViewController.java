@@ -14,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -65,7 +67,14 @@ public class LoginViewController implements Initializable {
 
     @FXML private JFXTextField jfxUserField;
 
+    @FXML private JFXTextField jfxTextFieldPassword;
+
+
     @FXML private JFXPasswordField jfxPasswordField;
+
+
+    @FXML private ToggleButton tgButtonView;
+
 
 
 
@@ -76,7 +85,7 @@ public class LoginViewController implements Initializable {
         jfxUserField.setId(null);
         jfxPasswordField.setId(null);
 
-        if (jfxUserField.getText().equals("admin") && jfxPasswordField.getText().equals("admin")) {
+        if (jfxUserField.getText().equals("admin") && jfxPasswordField.getText().equals("admin") || jfxTextFieldPassword.getText().equals("admin")) {
 
             // Aplicando a animação de entrada
             new FadeOutDownTransition(mainAP)
@@ -108,7 +117,7 @@ public class LoginViewController implements Initializable {
                 jfxUserField.setId("text-field-validation-error");
             }
 
-            if (!jfxPasswordField.getText().equals("admin")) {
+            if (!jfxPasswordField.getText().equals("admin") || !jfxTextFieldPassword.getText().equals("admin")) {
                 jfxPasswordField.setId("text-field-validation-error");
             }
 
@@ -183,7 +192,31 @@ public class LoginViewController implements Initializable {
                 .play();
     }
 
-    public void initialize(URL location, ResourceBundle resources) {
+    public void viewPass () {
+        tgButtonView.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                if(tgButtonView.isSelected()){
+                    tgButtonView.setGraphic(new ImageView("/images/eyeClosed.png"));
+                    jfxTextFieldPassword.setText(jfxPasswordField.getText());
+                    jfxPasswordField.setVisible(false);
+                    jfxTextFieldPassword.setVisible(true);
 
+                }else{
+                    tgButtonView.setGraphic(new ImageView("/images/eyeOpen.png"));
+                    jfxPasswordField.setText(jfxTextFieldPassword.getText());
+                    jfxPasswordField.setVisible(true);
+                    jfxTextFieldPassword.setVisible(false);
+
+                }
+            }
+        });
     }
+
+    public void initialize(URL location, ResourceBundle resources) {
+        tgButtonView.setGraphic(new ImageView("/images/eyeOpen.png"));
+        jfxTextFieldPassword.setVisible(false);
+        viewPass();
+    }
+
+
 }

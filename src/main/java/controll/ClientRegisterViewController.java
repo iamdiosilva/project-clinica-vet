@@ -1,8 +1,8 @@
 package controll;
 
-import Dao.CrudGernericDao;
-import Util.Alerta;
-import Util.ValidarCampo;
+import dao.CrudGenericDao;
+import util.Alerta;
+import util.ValidarCampo;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
@@ -12,90 +12,79 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.input.MouseEvent;
 import model.Client;
 import modelenum.DocumentType;
 
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class ClientRegisterViewController implements Initializable {
 
-    @FXML
-    private JFXButton btnSair;
-    @FXML
-    private JFXTextField tfName;
+    @FXML private JFXTextField tfName;
 
-    @FXML
-    private JFXTextField tfAdress;
+    @FXML private JFXTextField tfAddress;
 
-    @FXML
-    private JFXTextField tfNumDocument;
+    @FXML private JFXTextField tfNumberDocument;
 
-    @FXML
-    private JFXTextField tfContact;
+    @FXML private JFXTextField tfContact;
 
-    @FXML
-    private JFXTextField tfEmail;
-    @FXML
-    private JFXComboBox<DocumentType> cbTypeDocument;
+    @FXML private JFXTextField tfEmail;
 
-    private CrudGernericDao<Client> dao = new CrudGernericDao<>();
+    @FXML private JFXButton btnRegister;
 
-    private List<DocumentType> listdoc = new ArrayList<>();
-    private ObservableList<DocumentType> obsdoc;
+    @FXML private JFXButton btnExit;
+
+    @FXML private JFXComboBox<DocumentType> cbTypeDocument;
+
+    private CrudGenericDao<Client> dao = new CrudGenericDao<>();
 
     public void loadDocumentTypeList() {
-
-        listdoc.add(DocumentType.CPF);
-        listdoc.add(DocumentType.CNPJ);
-        obsdoc = FXCollections.observableArrayList(listdoc);
-        cbTypeDocument.setItems(obsdoc);
-
+        List<DocumentType> listDocument = Arrays.asList(DocumentType.CPF, DocumentType.CNPJ);
+        ObservableList<DocumentType> obsDocument = FXCollections.observableArrayList(listDocument);
+        cbTypeDocument.setItems(obsDocument);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ocultarCampoNmDoc();
+        hideFieldNmDoc();
         loadDocumentTypeList();
         maskNumberDocument();
         maskContact();
-        ativarCampo();
-
+        fieldActive();
 
     }
 
 
     @FXML
-    void cadastroRegistro(ActionEvent event) {
+    void registerClient(ActionEvent event) {
 
-        if (ValidarCampo.chegcarcampoVazio(tfName, tfAdress, tfContact, cbTypeDocument, tfNumDocument)) {
+        if (ValidarCampo.chegcarcampoVazio(tfName, tfAddress, tfContact, cbTypeDocument, tfNumberDocument)) {
 
         }
         Client client = new Client();
         client.setName_Person(tfName.getText());
-        client.setAddress(tfAdress.getText());
+        client.setAddress(tfAddress.getText());
         client.setTelephone(tfContact.getText());
         client.setDocument_Type(cbTypeDocument.getSelectionModel().getSelectedItem());
-        client.setDoc_Number(tfNumDocument.getText());
+        client.setDoc_Number(tfNumberDocument.getText());
         client.setEmail(tfEmail.getText());
 
-        if (dao.salvarDados(client)) {
+        if (dao.saveInformation(client)) {
             Alerta.msgInformacao("Registro Salvo com Sucesso ");
-            limparCampos();
+            clearFields();
         } else {
             Alerta.msgInformacao("Ocorreu erros ao Gravar o registro ");
         }
     }
 
-    public void limparCampos() {
+    public void clearFields() {
         tfName.clear();
-        tfAdress.clear();
+        tfAddress.clear();
         tfContact.clear();
         tfEmail.clear();
-        tfNumDocument.clear();
+        tfNumberDocument.clear();
         cbTypeDocument.setValue(DocumentType.TIPO_DOCUMENTO);
     }
 
@@ -115,31 +104,31 @@ public class ClientRegisterViewController implements Initializable {
             TextFieldFormatter tff = new TextFieldFormatter();
             tff.setMask("###.###.###-##");
             tff.setCaracteresValidos("0123456789");
-            tff.setTf(tfNumDocument);
+            tff.setTf(tfNumberDocument);
             tff.formatter();
         } else {
             TextFieldFormatter tff = new TextFieldFormatter();
             tff.setMask("##.###.###/####-##");
             tff.setCaracteresValidos("0123456789");
-            tff.setTf(tfNumDocument);
+            tff.setTf(tfNumberDocument);
             tff.formatter();
         }
 
     }
 
     @FXML
-    void ativarCampo() {
+    void fieldActive() {
         if(cbTypeDocument.getValue()==DocumentType.CNPJ || cbTypeDocument.getValue() == DocumentType.CPF){
-            tfNumDocument.setDisable(false);
+            tfNumberDocument.setDisable(false);
         }
     }
 
     @FXML
-    void sairTela(ActionEvent event) {
-            btnSair.getScene().getWindow().hide();
+    void exitScreen(ActionEvent event) {
+            btnExit.getScene().getWindow().hide();
     }
 
-    public void ocultarCampoNmDoc() {
-        tfNumDocument.setDisable(true);
+    public void hideFieldNmDoc() {
+        tfNumberDocument.setDisable(true);
     }
 }

@@ -1,12 +1,12 @@
-package Dao;
+package dao;
 
 import model.*;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class ConexaoBanco {
-    private static SessionFactory conexao = null;
+public class DataBaseConnection {
+    private static SessionFactory connection = null;
     private static Configuration configuration;
 
     private static SessionFactory buildSessionFactory() {
@@ -19,18 +19,18 @@ public class ConexaoBanco {
         configuration.addPackage("E.P_Clinica_Vet.model").addAnnotatedClass(Client.class);
 
         //recebe a construcao da sessao com o banco
-        conexao = configuration.buildSessionFactory();
+        connection = configuration.buildSessionFactory();
 
-        return conexao;
+        return connection;
     }
 
     // MTD para acessar a conexao bild
     public  static SessionFactory getSessionFactory(){
-        if(conexao == null){
-            conexao = buildSessionFactory();
+        if(connection == null){
+            connection = buildSessionFactory();
         }
-        System.out.println("ConexaoBanco.getSessionFactory"+ conexao);
+        System.out.println("ConexaoBanco.getSessionFactory"+ connection);
 
-        return conexao;
+        return connection;
     }
 }

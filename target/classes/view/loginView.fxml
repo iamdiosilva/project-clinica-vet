@@ -6,6 +6,7 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -72,6 +73,12 @@
                   <Font name="Trebuchet MS" size="48.0" />
                </font>
             </Label>
+            <JFXTextField fx:id="jfxTextFieldPassword" alignment="CENTER" focusColor="WHITE" layoutX="137.0" layoutY="300.0" promptText="Senha">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <ToggleButton fx:id="tgButtonView" layoutX="339.0" layoutY="307.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="49.0" style="-fx-background-color: Transparent;" />
          </children>
       </AnchorPane>
    </children>

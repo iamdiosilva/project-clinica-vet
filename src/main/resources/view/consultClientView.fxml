@@ -17,28 +17,28 @@
             <Font name="Trebuchet MS" size="48.0" />
          </font>
       </Label>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="156.0" prefHeight="37.0" prefWidth="573.0" promptText="Nome" AnchorPane.bottomAnchor="527.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="334.0" AnchorPane.topAnchor="156.0">
+      <JFXTextField fx:id="tfName" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="156.0" prefHeight="37.0" prefWidth="573.0" promptText="Nome" AnchorPane.bottomAnchor="527.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="334.0" AnchorPane.topAnchor="156.0">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="223.0" prefHeight="37.0" prefWidth="361.0" promptText="Endereço" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="223.0">
+      <JFXTextField fx:id="tfAddress" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="223.0" prefHeight="37.0" prefWidth="361.0" promptText="Endereço" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="223.0">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXComboBox fx:id="cbTypeDocument" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="294.0" prefHeight="25.0" prefWidth="154.0" promptText="Tipo de documento" AnchorPane.bottomAnchor="401.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="753.0" AnchorPane.topAnchor="294.0" />
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="251.0" layoutY="282.0" prefHeight="37.0" prefWidth="176.0" promptText="Nº do documento" AnchorPane.bottomAnchor="401.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="282.0">
+      <JFXComboBox fx:id="cbTypeDocument" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="294.0" onAction="#fieldActivate" prefHeight="25.0" prefWidth="154.0" promptText="Tipo de documento" AnchorPane.bottomAnchor="401.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="753.0" AnchorPane.topAnchor="294.0" />
+      <JFXTextField fx:id="tfNumberDocument" disable="true" focusColor="WHITE" labelFloat="true" layoutX="251.0" layoutY="282.0" onKeyReleased="#maskNumberDocument" prefHeight="37.0" prefWidth="176.0" promptText="Nº do documento" AnchorPane.bottomAnchor="401.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="282.0">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="462.0" layoutY="223.0" prefHeight="37.0" prefWidth="183.0" promptText="Contato" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="335.0" AnchorPane.topAnchor="223.0">
+      <JFXTextField fx:id="tfContact" focusColor="WHITE" labelFloat="true" layoutX="462.0" layoutY="223.0" onKeyReleased="#maskContact" prefHeight="37.0" prefWidth="183.0" promptText="Contato" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="335.0" AnchorPane.topAnchor="223.0">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="348.0" prefHeight="37.0" prefWidth="361.0" promptText="Email" AnchorPane.bottomAnchor="335.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="348.0">
+      <JFXTextField fx:id="tfEmail" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="348.0" prefHeight="37.0" prefWidth="361.0" promptText="Email" AnchorPane.bottomAnchor="335.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="348.0">
          <font>
             <Font size="16.0" />
          </font>

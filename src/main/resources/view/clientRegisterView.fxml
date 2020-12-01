@@ -19,13 +19,13 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="tfAdress" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="264.0" prefHeight="37.0" prefWidth="361.0" promptText="Endereço" AnchorPane.bottomAnchor="419.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="264.0">
+      <JFXTextField fx:id="tfAddress" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="264.0" prefHeight="37.0" prefWidth="361.0" promptText="Endereço" AnchorPane.bottomAnchor="419.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="264.0">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXComboBox fx:id="cbTypeDocument" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="335.0" onAction="#ativarCampo" prefHeight="25.0" prefWidth="154.0" promptText="Tipo de documento" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="753.0" AnchorPane.topAnchor="335.0" />
-      <JFXTextField fx:id="tfNumDocument" focusColor="WHITE" labelFloat="true" layoutX="251.0" layoutY="323.0" onKeyReleased="#maskNumberDocument" prefHeight="37.0" prefWidth="176.0" promptText="Nº do documento" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="323.0">
+      <JFXComboBox fx:id="cbTypeDocument" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="335.0" onAction="#fieldActive" prefHeight="25.0" prefWidth="154.0" promptText="Tipo de documento" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="753.0" AnchorPane.topAnchor="335.0" />
+      <JFXTextField fx:id="tfNumberDocument" focusColor="WHITE" labelFloat="true" layoutX="251.0" layoutY="323.0" onKeyReleased="#maskNumberDocument" prefHeight="37.0" prefWidth="176.0" promptText="Nº do documento" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="323.0">
          <font>
             <Font size="16.0" />
          </font>
@@ -40,12 +40,12 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="btnRegister" accessibleText="Entrar" layoutX="298.0" layoutY="496.0" onAction="#cadastroRegistro" style="-fx-background-color: #26A69A;" text="Cadastrar" textFill="#4d4d4d">
+      <JFXButton fx:id="btnRegister" accessibleText="Entrar" layoutX="298.0" layoutY="496.0" onAction="#registerClient" style="-fx-background-color: #26A69A;" text="Cadastrar" textFill="#4d4d4d">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnSair" accessibleText="Entrar" layoutX="67.0" layoutY="496.0" onAction="#sairTela" prefHeight="51.0" prefWidth="147.0" style="-fx-background-color: #26A69A;" text="Sair" textFill="#4d4d4d">
+      <JFXButton fx:id="btnExit" accessibleText="Entrar" layoutX="67.0" layoutY="496.0" onAction="#exitScreen" prefHeight="51.0" prefWidth="147.0" style="-fx-background-color: #26A69A;" text="Sair" textFill="#4d4d4d">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
