@@ -2,19 +2,40 @@ package model;
 
 import modelenum.DocumentType;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Person")
 public class Person {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_person",nullable = false)
     private long id_Person;
-    private long document_Number;
+
+    @Column(name="doc_numero",length = 50,nullable = false)
+    private String doc_Number;
+
+    @Column(name="name_Person",length = 100,nullable = false)
     private String name_Person;
+
+    @Column(name="document_Type",length = 50,nullable = false)
     private DocumentType document_Type;
-    private String address;
-    private String telephone;
-    private String email;
 
-    public Person() {
-
+    public String getName_Person() {
+        return name_Person;
     }
 
+    @Column(name="address",length = 100,nullable = false)
+    private String address;
+
+    @Column(name="telephone",length = 15,nullable = false)
+    private String telephone;
+
+    @Column(name="email",length = 100,nullable = false)
+    private String email;
+
+
+    /*
     public Person(long id_Person, long document_Number, String name_Person, DocumentType document_Type, String address, String telephone, String email) {
         this.id_Person = id_Person;
         this.document_Number = document_Number;
@@ -24,6 +45,7 @@ public class Person {
         this.telephone = telephone;
         this.email = email;
     }
+     */
 
     public long getId_Person() {
         return id_Person;
@@ -33,15 +55,15 @@ public class Person {
         this.id_Person = id_Person;
     }
 
-    public long getDocument_Number() {
-        return document_Number;
+    public String getDoc_Number() {
+        return doc_Number;
     }
 
-    public void setDocument_Number(long document_Number) {
-        this.document_Number = document_Number;
+    public void setDoc_Number(String doc_Number) {
+        this.doc_Number = doc_Number;
     }
 
-    public String getName_Person() {
+    public String getName_Person(String text) {
         return name_Person;
     }
 
