@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controll.ClientRegisterViewController">
+   <children>
+      <Label layoutX="142.0" layoutY="48.0" text="Registro de Cliente" AnchorPane.leftAnchor="140.0">
+         <font>
+            <Font name="Trebuchet MS" size="48.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="197.0" prefHeight="37.0" prefWidth="573.0" promptText="Nome" AnchorPane.bottomAnchor="486.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="334.0" AnchorPane.topAnchor="197.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="264.0" prefHeight="37.0" prefWidth="361.0" promptText="Endereço" AnchorPane.bottomAnchor="419.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="264.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbTypeDocument" focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="335.0" prefHeight="25.0" prefWidth="154.0" promptText="Tipo de documento" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="753.0" AnchorPane.topAnchor="335.0" />
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="251.0" layoutY="323.0" prefHeight="37.0" prefWidth="176.0" promptText="Nº do documento" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="323.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="462.0" layoutY="264.0" prefHeight="37.0" prefWidth="183.0" promptText="Contato" AnchorPane.bottomAnchor="419.0" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="335.0" AnchorPane.topAnchor="264.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="73.0" layoutY="389.0" prefHeight="37.0" prefWidth="361.0" promptText="Email" AnchorPane.bottomAnchor="294.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="546.0" AnchorPane.topAnchor="389.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnRegister" accessibleText="Entrar" layoutX="298.0" layoutY="496.0" style="-fx-background-color: #26A69A;" text="Cadastrar" textFill="#4d4d4d">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

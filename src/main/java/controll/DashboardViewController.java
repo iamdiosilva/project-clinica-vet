@@ -14,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -55,6 +56,8 @@ public class DashboardViewController implements Initializable {
     @FXML private AnchorPane dashboardAP;
     @FXML private AnchorPane apTranslateMenu;
     @FXML private AnchorPane apVBoxSidebar;
+
+    @FXML private BorderPane bpViewsDashBoard;
 
     @FXML private JFXButton btnRegister;
     @FXML private JFXButton btnMinimize;
@@ -140,7 +143,7 @@ public class DashboardViewController implements Initializable {
     }
 
     @FXML
-    private void btnRegister (MouseEvent event){
+    private void btnRegisterMenu (MouseEvent event){
 
         TranslateTransition slide = new TranslateTransition();
 
@@ -169,7 +172,30 @@ public class DashboardViewController implements Initializable {
             slide.setToX(0);
             slide.play();
 
+
         }
+
+    }
+
+    /*BUTTON METHODS*/
+
+    @FXML
+    private void registerClientView(MouseEvent event) throws IOException {
+        loadView("clientRegisterView");
+        btnRegisterMenu(event);
+    }
+
+    @FXML
+    private  void consultClientView(MouseEvent event) throws IOException{
+        loadView("consultClientView");
+        btnRegisterMenu(event);
+    }
+
+    /* LOAD VIEWS*/
+
+    private void loadView(String view) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/view/"+view+".fxml"));
+        bpViewsDashBoard.setCenter(root);
 
     }
 

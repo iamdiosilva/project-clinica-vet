@@ -1,10 +1,12 @@
 package model;
 
+import modelenum.DocumentType;
+
 public class Person {
     private long id_Person;
     private long document_Number;
     private String name_Person;
-    private String document_Type;
+    private DocumentType document_Type;
     private String address;
     private String telephone;
     private String email;
@@ -13,7 +15,7 @@ public class Person {
 
     }
 
-    public Person(long id_Person, long document_Number, String name_Person, String document_Type, String address, String telephone, String email) {
+    public Person(long id_Person, long document_Number, String name_Person, DocumentType document_Type, String address, String telephone, String email) {
         this.id_Person = id_Person;
         this.document_Number = document_Number;
         this.name_Person = name_Person;
@@ -47,11 +49,11 @@ public class Person {
         this.name_Person = name_Person;
     }
 
-    public String getDocument_Type() {
+    public DocumentType getDocument_Type() {
         return document_Type;
     }
 
-    public void setDocument_Type(String document_Type) {
+    public void setDocument_Type(DocumentType document_Type) {
         this.document_Type = document_Type;
     }
 
